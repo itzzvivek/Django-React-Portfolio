@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
-import Logo from "../assets/logo1.png";
+// import Logo from "../assets/logo1.png";
 import {Link} from 'react-scroll'
 // import userEvent from '@testing-library/user-event'
 
