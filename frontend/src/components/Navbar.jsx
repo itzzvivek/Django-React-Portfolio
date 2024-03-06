@@ -18,7 +18,7 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className="fixed w-full h-[80x] flex justify-between items-center px-4 bg-[#20242d] text-gray-300">
+    <div className="fixed w-full h-[80x] flex justify-between items-center px-4 bg-[#14101b] text-gray-300">
       {/* <div>
         <img src={Logo} alt="Logon Image" style={{ width: "50px" }} />
       </div> */}
@@ -31,6 +31,7 @@ const Navbar = () => {
         <li className="hover:text-teal-600"><Link to="skills" smooth={true} duration={500}>Skills</Link></li>
         <li className="hover:text-teal-600"><Link to="work" smooth={true} duration={500}>Work</Link></li>
         <li className="hover:text-teal-600"><Link to="contact" smooth={true} duration={500}>Contact</Link></li>
+        <li className="hover:text-teal-600"><Link to="contact" smooth={true} duration={500}>Newsletter</Link></li>
       </ul>
 
       {/* Hamburger */}
@@ -51,6 +52,7 @@ const Navbar = () => {
         <li className="py-6 text-4xl"><Link onClick={handleClick} to="skills" smooth={true} duration={500}>Skills</Link></li>
         <li className="py-6 text-4xl"><Link onClick={handleClick} to="work" smooth={true} duration={500}>Work</Link></li>
         <li className="py-6 text-4xl"><Link onClick={handleClick} to="contact" smooth={true} duration={500}>Contact</Link></li>
+        <li className="py-6 text-4xl"><Link onClick={handleClick} to="contact" smooth={true} duration={500}>Newsletter</Link></li>
       </ul>
 
       {/* Social icons */}

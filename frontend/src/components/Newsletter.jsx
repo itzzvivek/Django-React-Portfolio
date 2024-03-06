@@ -2,7 +2,7 @@ import React from 'react'
 
 const Newsletter = () => {
   return (
-    <div>
+    <div className='bg-[#14101b]'>
       
     </div>
   )
