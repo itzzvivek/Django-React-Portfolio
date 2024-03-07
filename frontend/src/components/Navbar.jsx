@@ -1,17 +1,14 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom"
 import {
   FaBars,
   FaTimes,
-  FiGithub,
   FaLinkedin,
-  FaFacebook,
   FaGithub,
 } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
-// import Logo from "../assets/logo1.png";
-import {Link} from 'react-scroll'
-// import userEvent from '@testing-library/user-event'
+
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -19,19 +16,15 @@ const Navbar = () => {
 
   return (
     <div className="fixed w-full h-[80x] flex justify-between items-center px-4 bg-[#14101b] text-gray-300">
-      {/* <div>
-        <img src={Logo} alt="Logon Image" style={{ width: "50px" }} />
-      </div> */}
       <h1 className="font-bold text-4xl">VW</h1>
 
       {/* menu */}
       <ul className="hidden md:flex">
-        <li className="hover:text-teal-600"><Link to="home" smooth={true} duration={500}>Home</Link></li>
-        <li className="hover:text-teal-600"><Link to="about" smooth={true} duration={500}>About</Link></li>
-        <li className="hover:text-teal-600"><Link to="skills" smooth={true} duration={500}>Skills</Link></li>
-        <li className="hover:text-teal-600"><Link to="work" smooth={true} duration={500}>Work</Link></li>
-        <li className="hover:text-teal-600"><Link to="contact" smooth={true} duration={500}>Contact</Link></li>
-        <li className="hover:text-teal-600"><Link to="contact" smooth={true} duration={500}>Newsletter</Link></li>
+        <NavLink className="hover:text-teal-600"><li to="/">Home</li></NavLink>
+        <NavLink className="hover:text-teal-600"><li to="/about">About</li></NavLink>
+        <NavLink className="hover:text-teal-600"><li to="/work">Work</li></NavLink>
+        <NavLink className="hover:text-teal-600"><li to="/contact">Contact</li></NavLink>
+        <NavLink className="hover:text-teal-600"><li to="newsletter">Newsletter</li></NavLink>
       </ul>
 
       {/* Hamburger */}
@@ -47,12 +40,11 @@ const Navbar = () => {
             : "absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center"
         }
       >
-        <li className="py-6 text-4xl"><Link onClick={handleClick} to="home" smooth={true} duration={500}>Home</Link></li>
-        <li className="py-6 text-4xl"><Link onClick={handleClick} to="about" smooth={true} duration={500}>About</Link></li>
-        <li className="py-6 text-4xl"><Link onClick={handleClick} to="skills" smooth={true} duration={500}>Skills</Link></li>
-        <li className="py-6 text-4xl"><Link onClick={handleClick} to="work" smooth={true} duration={500}>Work</Link></li>
-        <li className="py-6 text-4xl"><Link onClick={handleClick} to="contact" smooth={true} duration={500}>Contact</Link></li>
-        <li className="py-6 text-4xl"><Link onClick={handleClick} to="contact" smooth={true} duration={500}>Newsletter</Link></li>
+        <NavLink className="py-6 text-4xl"><li to="/">Home</li></NavLink>
+        <NavLink className="py-6 text-4xl"><li to="/about">About</li></NavLink>
+        <NavLink className="py-6 text-4xl"><li to="/work">Work</li></NavLink>
+        <NavLink className="py-6 text-4xl"><li to="/contact">Contact</li></NavLink>
+        <NavLink className="py-6 text-4xl"><li to="/newsletter">Newsletter</li></NavLink>
       </ul>
 
       {/* Social icons */}
