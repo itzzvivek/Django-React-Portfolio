@@ -1,4 +1,5 @@
 {
+    
     "builds": [{
         "src": "portfolio/wsgi.py",
         "use": "@vercel/python",
@@ -6,6 +7,6 @@
     }],
     "routes": [{
         "src": "/(.*)",
-        "dest": "portfolio/wsgi.py"
+        "dest": "portfolio/index.html"
     }]
 }
