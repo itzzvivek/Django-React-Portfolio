@@ -1,4 +1,8 @@
 {
+    "rewrites":[
+        {"source": "/(.*)", "destination": "/"}            
+    ],
+
     "builds": [{
         "src": "portfolio/wsgi.py",
         "use": "@vercel/python",
