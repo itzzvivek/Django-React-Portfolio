@@ -1,5 +1,5 @@
 import React from 'react'
-import { ReactTyped } from 'react-typed'
+// import { ReactTyped } from 'react-typed'
 import {HiArrowNarrowRight} from 'react-icons/hi'
 
 const Home = () => {
@@ -13,7 +13,7 @@ const Home = () => {
             <h2 className='text-4xl sm:text-7xl font-bold text-[#8892b0]'>
               I'm a Software Developer.
             </h2>
-            <p className='text-[#8892b0] py-4 max-w-[700px]'>passionate software developer With a solid understanding technologies, 
+            <p className='text-[#8892b0] py-4 max-w-[700px]'>Passionate software developer With a solid understanding technologies, 
             I strive to create seamless and efficient digital solutions.  My expertise lies in building robust application that power exceptional user experiences.
             </p>
             <div>

@@ -21,11 +21,11 @@ const Navbar = () => {
 
       {/* menu */}
       <ul className="hidden md:flex">
-        <NavLink to="/" className="hover:text-teal-600"><li smooth={true} duration={500}>Home</li></NavLink>
-        <NavLink to="/about" className="hover:text-teal-600"><li smooth={true} duration={500}>About</li></NavLink>
-        <NavLink to="/work" className="hover:text-teal-600"><li smooth={true} duration={500}>Work</li></NavLink>
-        <NavLink to="/contact" className="hover:text-teal-600"><li smooth={true} duration={500}>Contact</li></NavLink>
-        <NavLink to="newsletter" className="hover:text-teal-600"><li smooth={true} duration={500}>Newsletter</li></NavLink>
+        <NavLink to="/" className="hover:text-teal-600"><li>Home</li></NavLink>
+        <NavLink to="/about" className="hover:text-teal-600"><li>About</li></NavLink>
+        <NavLink to="/work" className="hover:text-teal-600"><li>Work</li></NavLink>
+        <NavLink to="/contact" className="hover:text-teal-600"><li>Contact</li></NavLink>
+        <NavLink to="/newsletter" className="hover:text-teal-600"><li>Newsletter</li></NavLink>
       </ul>
 
       {/* Hamburger */}
@@ -41,11 +41,11 @@ const Navbar = () => {
             : "absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center"
         }
       >
-        <NavLink className="py-6 text-4xl"><Link to="/" onClick={handleClick} smooth={true} duration={500}>Home</Link></NavLink>
-        <NavLink className="py-6 text-4xl"><Link to="/about" onClick={handleClick} smooth={true} duration={500}>About</Link></NavLink>
-        <NavLink className="py-6 text-4xl"><Link to="/work" onClick={handleClick} smooth={true} duration={500}>Work</Link></NavLink>
-        <NavLink className="py-6 text-4xl"><Link to="/contact" onClick={handleClick} smooth={true} duration={500}>Contact</Link></NavLink>
-        <NavLink className="py-6 text-4xl"><Link to="/newsletter" onClick={handleClick} smooth={true} duration={500}>Newsletter</Link></NavLink>
+        <NavLink to="/" className="py-6 text-4xl"><li>Home</li></NavLink>
+        <NavLink to="/about" className="py-6 text-4xl"><li>About</li></NavLink>
+        <NavLink to="/work" className="py-6 text-4xl"><li>Work</li></NavLink>
+        <NavLink to="/contact" className="py-6 text-4xl"><li>Contact</li></NavLink>
+        <NavLink to="/newsletter" className="py-6 text-4xl"><li>Newsletter</li></NavLink>
       </ul>
 
       {/* Social icons */}

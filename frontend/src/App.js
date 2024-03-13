@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-import Contact from "./components/Contact";
+// import Contact from "./components/Contact";
 import Newsletter from "./components/Newsletter";
 import Work from "./components/Work";
 import About from "./components/About";
@@ -17,15 +17,15 @@ function App() {
       // <Contact/>
     },
     {
-      path: '/',
+      path: '/about',
       element: <><Navbar /><About /></>
     },
     {
-      path: '/',
+      path: '/work',
       element: <><Navbar /><Work /></>
     },
     {
-      path: '/',
+      path: '/newsletter',
       element: <><Navbar /><Newsletter /></>
     },
   ])
@@ -37,3 +37,4 @@ function App() {
 }
 
 export default App;
+
