@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-// import Contact from "./components/Contact";
+import Contact from "./components/Contact";
 import Newsletter from "./components/Newsletter";
 import Work from "./components/Work";
 import About from "./components/About";
@@ -23,6 +23,10 @@ function App() {
     {
       path: '/work',
       element: <><Navbar /><Work /></>
+    },
+    {
+      path: '/contact',
+      element: <><Navbar /><Contact /></>
     },
     {
       path: '/newsletter',
