@@ -14,6 +14,10 @@ import { Link } from "react-scroll"
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
+  const handleLinkClick = () => {
+    setNav(false);
+  }
+  
 
   return (
     <div className="fixed w-full h-[80x] flex justify-between items-center px-4 bg-[#14101b] text-gray-300">
@@ -25,7 +29,7 @@ const Navbar = () => {
         <NavLink to="/about" className="hover:text-teal-600"><li>About</li></NavLink>
         <NavLink to="/work" className="hover:text-teal-600"><li>Work</li></NavLink>
         <NavLink to="/contact" className="hover:text-teal-600"><li>Contact</li></NavLink>
-        <NavLink to="/newsletter" className="hover:text-teal-600"><li>Newsletter</li></NavLink>
+        <NavLink to="/newsletter"  className="hover:text-teal-600"><li>Newsletter</li></NavLink>
       </ul>
 
       {/* Hamburger */}
@@ -41,11 +45,11 @@ const Navbar = () => {
             : "absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center"
         }
       >
-        <NavLink to="/" className="py-6 text-4xl"><li>Home</li></NavLink>
-        <NavLink to="/about" className="py-6 text-4xl"><li>About</li></NavLink>
-        <NavLink to="/work" className="py-6 text-4xl"><li>Work</li></NavLink>
-        <NavLink to="/contact" className="py-6 text-4xl"><li>Contact</li></NavLink>
-        <NavLink to="/newsletter" className="py-6 text-4xl"><li>Newsletter</li></NavLink>
+        <NavLink to="/" onClick={handleLinkClick} className="py-6 text-4xl"><li>Home</li></NavLink>
+        <NavLink to="/about" onClick={handleLinkClick} className="py-6 text-4xl"><li>About</li></NavLink>
+        <NavLink to="/work" onClick={handleLinkClick} className="py-6 text-4xl"><li>Work</li></NavLink>
+        <NavLink to="/contact" onClick={handleLinkClick} className="py-6 text-4xl"><li>Contact</li></NavLink>
+        <NavLink to="/newsletter" onClick={handleLinkClick} className="py-6 text-4xl"><li>Newsletter</li></NavLink>
       </ul>
 
       {/* Social icons */}

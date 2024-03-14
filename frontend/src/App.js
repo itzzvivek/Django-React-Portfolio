@@ -36,9 +36,20 @@ function App() {
   return (
     <>
       <RouterProvider router={router} />
+      <Message />
+
     </>
   );
 }
 
+
+
+function Message() {
+  const footerLine = "Made With ❤️ By V1VEK";
+
+  return <div className='text-teal-600 text-center fixed bottom-0 w-full'>{footerLine}</div>;
+}
+
 export default App;
+
 
