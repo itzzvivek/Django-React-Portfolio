@@ -4,11 +4,11 @@ const Contact = () => {
   return (
     <div name='contact' className='w-full h-screen bg-[#14101b] flex justify-center items-center p-4'>
         <form method='POST' action="" className='flex flex-col max-w-[600px] w-full'>
-            <div className="">
+            <div className="text-center">
                 <p className="text-4xl font-bold inline border-b-4 border-teal-600 text-gray-300">Contact</p>
-                <p className='text-gray-300 py-4'>Submit the form below or shoot me an email - myemail@gmail.com</p>
+                {/* <p className='text-gray-300 py-4'>Submit the form below or shoot me an email - myemail@gmail.com</p> */}
             </div>
-            <input className='bg-[#ccd6f6] p-2' type="text" name="name" id="" placeholder='Name'/>
+            <input className='bg-[#ccd6f6] p-2 mt-6' type="text" name="name" id="" placeholder='Name'/>
             <input className='my-4 p-2 bg-[#ccd6f6]' type="email" placeholder='Email'name='email'/>
             <textarea className='my-4 p-2 bg-[#ccd6f6]' name="message" id="" cols="30" rows="10" placeholder='Message'></textarea>
             <button className='text-white border-2 hover:bg-teal-600 hover:border-teal-600 px-4 py-3 my-8 mx-auto flex items-center'>Let's Connect</button>
@@ -18,4 +18,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Contact  

@@ -47,7 +47,7 @@ function App() {
 function Message() {
   const footerLine = "Made With ❤️ By V1VEK";
 
-  return <div className='text-teal-600 text-center fixed bottom-0 w-full'>{footerLine}</div>;
+  return <div className='text-white text-center fixed bottom-0 w-full'>{footerLine}</div>;
 }
 
 export default App;

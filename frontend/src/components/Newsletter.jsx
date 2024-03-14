@@ -6,6 +6,8 @@ const Newsletter = () => {
         <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
             <div className='pb-8 text-center'>
                 <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-teal-600'>Newsletter</p>
+                <p className='text-2xl text-gray-300 py-4'>Welcome to My Portfolio's Newsletter! I'm Vivek, a software developer. 
+                Join me as we explore the exciting world of technology, discussing coding, emerging technologies, and the impact of tech on.</p>
             </div>
             <div name="newsletter" action="" class="flex justify-center items-center">
               <form method='POST' class="bg-[#14101b] flex text-black">
@@ -19,3 +21,4 @@ const Newsletter = () => {
 }
 
 export default Newsletter
+ 
