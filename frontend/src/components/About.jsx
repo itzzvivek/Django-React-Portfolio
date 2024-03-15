@@ -1,4 +1,6 @@
 import React from "react";
+import { FaLinkedin, FaGithub, FaDiscord } from "react-icons/fa";
+import { HiOutlineMail } from "react-icons/hi";
 
 const About = () => {
   return (
@@ -25,15 +27,18 @@ const About = () => {
               innovative solutions and building exceptional digital experiences.
               With a strong foundation in full-stack development, I specialize
               in creating responsive web applications that deliver seamless user
-              experiences. I thrive in collaborative environments, where my
-              skills in problem-solving and attention to detail can contribute
-              to the success of projects. Currently, I'm focused on honing my
-              skills and exploring new technologies to stay at the forefront of
-              the ever-evolving field of software development.
+              experiences.I'm focused on honing my skills and exploring new
+              technologies to stay at the forefront of the ever-evolving field
+              of software development. Visit my
+              <a href="https://github.com/itzzvivek" className="text-teal-600 font-bold px-2">
+                github
+              </a>
+              page to view my work
             </p>
+            <a href="/" className="font-bold border-b-4 border-teal-600">Resume</a>
           </div>
         </div>
-        <div name="skills">
+        <div name="skills" className="mt-4">
           <div className="py-2">
             <p className="font-bold">Skills :</p>
           </div>
@@ -66,6 +71,28 @@ const About = () => {
             <span className="mr-2 mb-2 rounded-sm px-2 py-1 font-medium text-white bg-blue-400">
               MySQL
             </span>
+          </div>
+        </div>
+        <div class="socialHandle" className="items-center">
+          <div className="mt-6 flex">
+            <a
+              className="mr-6 text-2xl"
+              href="https://www.linkedin.com/in/vivek-warkade-623866216/"
+            >
+              <FaLinkedin />
+            </a>
+            <a className="mr-6 text-2xl" href="https://github.com/itzzvivek">
+              <FaGithub />
+            </a>
+            <a
+              className="mr-6 text-2xl"
+              href="mailto:vivekwarkade000@gmail.com"
+            >
+              <HiOutlineMail />
+            </a>
+            <a className="mr-6 text-2xl" href="https://discord.gg/vQh73ZBv">
+              <FaDiscord />
+            </a>
           </div>
         </div>
       </div>
