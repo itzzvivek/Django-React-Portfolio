@@ -21,12 +21,51 @@ const About = () => {
           </div>
           <div>
             <p>
-              I am passionate about building excellent software that improves
-              the lives of those around me. I specialize in creating software
-              for clients ranging from individuals and small-businesses all the
-              way to large enterprise corporations. What would you do if you had
-              a software expert available at your fingertips?
+              I'm a dedicated software developer with a passion for crafting
+              innovative solutions and building exceptional digital experiences.
+              With a strong foundation in full-stack development, I specialize
+              in creating responsive web applications that deliver seamless user
+              experiences. I thrive in collaborative environments, where my
+              skills in problem-solving and attention to detail can contribute
+              to the success of projects. Currently, I'm focused on honing my
+              skills and exploring new technologies to stay at the forefront of
+              the ever-evolving field of software development.
             </p>
+          </div>
+        </div>
+        <div name="skills">
+          <div className="py-2">
+            <p className="font-bold">Skills :</p>
+          </div>
+
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-5 gap-2 text-center">
+            <span className="mr-2 mb-2 rounded-sm px-2 py-1 font-medium text-white bg-yellow-400">
+              Python
+            </span>
+            <span className="mr-2 mb-2 rounded-sm px-2 py-1 font-medium text-white bg-green-500">
+              Django
+            </span>
+            <span className="mr-2 mb-2 rounded-sm px-2 py-1 font-medium text-white bg-green-400">
+              FastAPI
+            </span>
+            <span className="mr-2 mb-2 rounded-sm px-2 py-1 font-medium text-white bg-blue-500">
+              React
+            </span>
+            <span className="mr-2 mb-2 rounded-sm px-2 py-1 font-medium text-white bg-blue-400">
+              TailwindCSS
+            </span>
+            <span className="mr-2 mb-2 rounded-sm px-2 py-1 font-medium text-white bg-purple-500">
+              Bootstrap
+            </span>
+            <span className="mr-2 mb-2 rounded-sm px-2 py-1 font-medium text-white bg-pink-500">
+              CSS
+            </span>
+            <span className="mr-2 mb-2 rounded-sm px-2 py-1 font-medium text-white bg-green-950">
+              MongoDB
+            </span>
+            <span className="mr-2 mb-2 rounded-sm px-2 py-1 font-medium text-white bg-blue-400">
+              MySQL
+            </span>
           </div>
         </div>
       </div>
