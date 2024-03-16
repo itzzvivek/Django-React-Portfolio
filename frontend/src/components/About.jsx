@@ -1,6 +1,5 @@
 import React from "react";
-import { FaLinkedin, FaGithub, FaDiscord } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
+
 
 const About = () => {
   return (
@@ -71,28 +70,6 @@ const About = () => {
             <span className="mr-2 mb-2 rounded-sm px-2 py-1 font-medium text-white bg-blue-400">
               MySQL
             </span>
-          </div>
-        </div>
-        <div class="socialHandle" className="items-center">
-          <div className="mt-6 flex">
-            <a
-              className="mr-6 text-2xl"
-              href="https://www.linkedin.com/in/vivek-warkade-623866216/"
-            >
-              <FaLinkedin />
-            </a>
-            <a className="mr-6 text-2xl" href="https://github.com/itzzvivek">
-              <FaGithub />
-            </a>
-            <a
-              className="mr-6 text-2xl"
-              href="mailto:vivekwarkade000@gmail.com"
-            >
-              <HiOutlineMail />
-            </a>
-            <a className="mr-6 text-2xl" href="https://discord.gg/vQh73ZBv">
-              <FaDiscord />
-            </a>
           </div>
         </div>
       </div>

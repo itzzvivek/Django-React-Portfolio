@@ -5,8 +5,10 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import Newsletter from "./components/Newsletter";
-import Work from "./components/Work";
+// import Work from "./components/Work";
 import About from "./components/About";
+import SocialFooter from './components/SocialFooter';
+
 
 
 function App() {
@@ -14,16 +16,15 @@ function App() {
     {
       path: '/',
       element: <><Navbar /><Home /></>
-      // <Contact/>
     },
     {
       path: '/about',
       element: <><Navbar /><About /></>
     },
-    {
-      path: '/work',
-      element: <><Navbar /><Work /></>
-    },
+    // {
+    //   path: '/work',
+    //   element: <><Navbar /><Work /></>
+    // },
     {
       path: '/contact',
       element: <><Navbar /><Contact /></>
@@ -34,11 +35,12 @@ function App() {
     },
   ])
   return (
-    <>
+    <div>
       <RouterProvider router={router} />
+      <SocialFooter />
       <Message />
 
-    </>
+    </div>
   );
 }
 

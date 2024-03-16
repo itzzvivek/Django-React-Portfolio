@@ -27,7 +27,6 @@ const Navbar = () => {
       <ul className="hidden md:flex">
         <NavLink to="/" className="hover:text-teal-600"><li>Home</li></NavLink>
         <NavLink to="/about" className="hover:text-teal-600"><li>About</li></NavLink>
-        <NavLink to="/work" className="hover:text-teal-600"><li>Work</li></NavLink>
         <NavLink to="/contact" className="hover:text-teal-600"><li>Contact</li></NavLink>
         <NavLink to="/newsletter"  className="hover:text-teal-600"><li>Newsletter</li></NavLink>
       </ul>
@@ -47,7 +46,6 @@ const Navbar = () => {
       >
         <NavLink to="/" onClick={handleLinkClick} className="py-6 text-4xl"><li>Home</li></NavLink>
         <NavLink to="/about" onClick={handleLinkClick} className="py-6 text-4xl"><li>About</li></NavLink>
-        <NavLink to="/work" onClick={handleLinkClick} className="py-6 text-4xl"><li>Work</li></NavLink>
         <NavLink to="/contact" onClick={handleLinkClick} className="py-6 text-4xl"><li>Contact</li></NavLink>
         <NavLink to="/newsletter" onClick={handleLinkClick} className="py-6 text-4xl"><li>Newsletter</li></NavLink>
       </ul>
