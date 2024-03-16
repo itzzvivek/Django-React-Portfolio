@@ -17,9 +17,10 @@ const Home = () => {
             I strive to create seamless and efficient digital solutions.  My expertise lies in building robust application that power exceptional user experiences.
             </p>
             <div>
-              <button className='text-white border-2 group px-6 py-3 my-2 flex items-center hover:bg-teal-600 hover:border-teal-600'>View Work 
+              <a href='https://github.com/itzzvivek'><button className='text-white border-2 group px-6 py-3 my-2 flex items-center hover:bg-teal-600 hover:border-teal-600'>View Work
                 <span className='group-hover:translate-x-3 duration-300'><HiArrowNarrowRight className='ml-3 '/></span>
               </button>
+              </a>
             </div>
         </div>
 
