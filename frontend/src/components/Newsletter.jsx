@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 const Newsletter = () => {
   const [email, setEmail] = useState('');
   const [subscribing, setSubscribing] = useState(false);
-  const [response, setResponse] = useState(null);
+  const [response, setResponse] = useState({message: null, type: null});
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,14 +19,18 @@ const Newsletter = () => {
       });
 
       if (response.ok){
-        setResponse('Subscribe successfully!');
-      } else {
+        setResponse({message: 'Subscribe successfully!', type: 'success'})
+        setEmail('');
+      } else {          
         throw new Error('failed to subscribe');
       }
     }catch (error) {
-      setResponse('Am error occurred. Please try again later.');
+      setResponse({message: 'An error occurred. Please try again later.', type: 'error'});
     }
-    setSubscribing(false); 
+    setTimeout(() =>{
+      setResponse({message: null, type: null});
+      setSubscribing(false);
+    }, 3000);
   };
 
   const handleChange = (e) => {
@@ -45,13 +49,17 @@ const Newsletter = () => {
               <form onSubmit={handleSubmit} class="bg-[#14101b] flex text-black">
                 <input class="my-4 px-6 py-2 bg-[#ccd6f6] rounded-l-lg" type="email" placeholder="Email" name="email" value={email} onChange={handleChange} />
                 <button class="text-white border-2 hover:bg-teal-600 hover:border-teal-600 my-4 px-4 py-1 flex items-center rounded-r-lg style" type='submit' disabled={subscribing}>Submit</button>
-                {response && <p>{response}</p>}
               </form>
             </div>
+            {response.message && (
+              <div className={`p-4 mb-4 text-sm rounded-lg ${response.type === 'success' ? 'bg-green-50 text-green-800' : 'bg-red-50 text-red-800'} duration-300`} role="alert">
+                <p>{response.message}</p>
+              </div>
+            )}
+            {/* {message && <p>{message}</p>} */}
         </div>
       </div>
   );
 };
 
 export default Newsletter
- 
