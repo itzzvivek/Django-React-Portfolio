@@ -1,8 +1,12 @@
 from django.shortcuts import render
-from django.core.mail import send_mail
+from django.core.mail import send_mail, EmailMultiAlternatives
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib import messages
 from .models import Subscriber
+from django.conf import settings
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
 import json
 import re
 
@@ -22,7 +26,7 @@ def contact(request):
         send_mail(
             'Contact Form Submission',
             f'Name: {name}\nEmail: {email}\nMessage: {message}',
-            'settings.EMAIL_HOST_USER',
+            settings.EMAIL_HOST_USER,
             [email],
             fail_silently=False,
         )
@@ -46,6 +50,20 @@ def subscribe_newsletter(request):
             return JsonResponse({'success': False, 'message': 'Email is already subscribed'}, status=400)
 
         # Save the subscriber to the database
+        subject = 'Thankyou for subscribe newsletter'
+        html_temp = render_to_string('templates/subscribeMail.html')
+        body = strip_tags(html_temp)
+        to_email = [email]
+        message = EmailMultiAlternatives(
+            subject=subject,
+            body=body,
+            from_email=settings.EMAIL_HOST_USER,
+            to=to_email,
+        )
+        message.attach_alternative(html_temp, "text/html")
+        message.send()
+        messages.success(request, "Subscribe successful, please check your email for confirmation")
+
         subscribe = Subscriber(email=email)
         subscribe.save()
 
