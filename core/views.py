@@ -4,6 +4,7 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from .models import Subscriber
 import json
+import re
 
 
 def home(request):
@@ -38,7 +39,7 @@ def subscribe_newsletter(request):
 
         # check if email is valid (e.g., regex validation) and already subscribed'
 
-        if not email:
+        if not email or not re.match(r'^[\w\.-]+@[\w\.-]+$', email):
             return JsonResponse({'success': False, 'message': 'Email is required'}, status=400)
 
         if Subscriber.objects.filter(email=email).exists():
