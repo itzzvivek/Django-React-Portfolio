@@ -51,7 +51,7 @@ def subscribe_newsletter(request):
 
         # Save the subscriber to the database
         subject = 'Thankyou for subscribe newsletter'
-        html_temp = render_to_string('templates/subscribeMail.html')
+        html_temp = render_to_string('subscribeMail.html')
         body = strip_tags(html_temp)
         to_email = [email]
         message = EmailMultiAlternatives(
@@ -69,3 +69,4 @@ def subscribe_newsletter(request):
 
         return JsonResponse({'success': True, 'message': 'Subscribed successfully'})
     return JsonResponse({"success": False, 'message': 'Invalid request'}, status=405)
+

@@ -56,7 +56,6 @@ const Newsletter = () => {
                 <p>{response.message}</p>
               </div>
             )}
-            {/* {message && <p>{message}</p>} */}
         </div>
       </div>
   );
