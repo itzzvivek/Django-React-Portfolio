@@ -7,7 +7,7 @@ const Contact = () => {
     message: "",
   });
   const [submitting, setSubmitting] = useState(false);
-  const [response, setResponse] = useState(null);
+  const [response, setResponse] = useState({ message: null, type: null });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,16 +21,26 @@ const Contact = () => {
       });
 
       if (response.ok) {
-        setResponse("Form submitted successfully!");
-        setFormData({name: "", email: "", message: ""});
+        setResponse({
+          message: "Form submitted successfully!",
+          type: "success",
+        });
+        setFormData({ name: "", email: "", message: "" });
       } else {
         throw new Error("Failed to submit form!");
       }
     } catch (error) {
-      setResponse("An error occurred. Please try again later.");
+      setResponse({
+        message: "An error occurred. Please try again later.",
+        type: "error",
+      });
     }
+    setTimeout(() => {
+      setResponse({ message: null, type: null });
+      setSubmitting(false);
+    }, 3000);
 
-    setSubmitting(false);
+    
   };
 
   const handleChange = (e) => {
@@ -92,7 +102,20 @@ const Contact = () => {
         >
           Let's Connect
         </button>
-        {response && <p>{response}</p>}
+        <div name="alert">
+          {response.message && (
+            <div
+              className={`p-4 mb-4 text-sm rounded-lg ${
+                response.type === "success"
+                  ? "bg-green-50 text-green-800"
+                  : "bg-red-50 text-red-800"
+              } duration-300`}
+              role="alert"
+            >
+              <p>{response.message}</p>
+            </div>
+          )}
+        </div>
       </form>
     </div>
   );
