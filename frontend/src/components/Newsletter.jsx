@@ -10,7 +10,7 @@ const Newsletter = () => {
     setSubscribing(true);
 
     try {
-      const response = await fetch("newsletter/", {
+      const response = await fetch("subscribe/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

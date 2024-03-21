@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.core.mail import send_mail, EmailMultiAlternatives
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -7,6 +7,8 @@ from .models import Subscriber
 from django.conf import settings
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
+from django.shortcuts import get_object_or_404, Http404
+from django.utils.crypto import get_random_string
 import json
 import re
 
@@ -49,11 +51,20 @@ def subscribe_newsletter(request):
         if Subscriber.objects.filter(email=email).exists():
             return JsonResponse({'success': False, 'message': 'Email is already subscribed'}, status=400)
 
+        user, created = Subscriber.objects.get_or_create(email=email)
+        if created or not user.unsubscribe_token:
+            user.unsubscribe_token = get_random_string(length=32)
+            user.save()
+
         # Save the subscriber to the database
         subject = 'Thankyou for subscribe newsletter'
-        html_temp = render_to_string('subscribeMail.html')
-        body = strip_tags(html_temp)
         to_email = [email]
+        unsubscribe_link = "http://localhost:8000/unsubscribe/{}/".format(user.unsubscribe_token)
+        context = {
+            'unsubscribe_link': unsubscribe_link
+        }
+        html_temp = render_to_string('subscribeMail.html', context)
+        body = strip_tags(html_temp)
         message = EmailMultiAlternatives(
             subject=subject,
             body=body,
@@ -62,11 +73,21 @@ def subscribe_newsletter(request):
         )
         message.attach_alternative(html_temp, "text/html")
         message.send()
-        messages.success(request, "Subscribe successful, please check your email for confirmation")
 
-        subscribe = Subscriber(email=email)
-        subscribe.save()
+        # subscribe = Subscriber(email=email)
+        # subscribe.save()
 
         return JsonResponse({'success': True, 'message': 'Subscribed successfully'})
     return JsonResponse({"success": False, 'message': 'Invalid request'}, status=405)
 
+
+def unsubscribe_newsletter(request, unsubscribe_token):
+    user = get_object_or_404(Subscriber, unsubscribe_token=unsubscribe_token)
+    if user.email:
+        user.delete()
+        messages.success(request, 'You have successfully unsubscribe')
+    else:
+        messages.error(request, "Invalid unsubscribe link")
+        raise Http404("Invalid unsubscribe link.")
+
+    return render(request, "unsubscribeMsg.html")

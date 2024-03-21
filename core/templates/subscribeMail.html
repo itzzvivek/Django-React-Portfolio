@@ -1,37 +1,55 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Greeting Mail</title>
-</head>
-<body>
-    {% load static  %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-    <h3>Welcome to our newsletter! Stay connected with us for the latest updates</h3>
+  </head>
+  <body>
+    {% load static %}
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <title>Subscribe Newsletter</title>
+      </head>
+      <body>
+        <h3>
+          Welcome to our newsletter! Stay connected with us for the latest
+          updates
+        </h3>
 
+        <span>For any other queries checkout my socials</span>
+        <div class="social-icons">
+          <a href="https://github.com/itzzvivek"
+            ><img src="https://r2.easyimg.io/hvkv2mry7/github.png" alt="Github"
+          /></a>
+          <a href="https://www.linkedin.com/in/vivek-warkade-623866216/"
+            ><img
+              src="https://r2.easyimg.io/hvkv2mry7/linkedin.png"
+              alt="Linkedin"
+          /></a>
+          <a href="https://twitter.com/vivekwarkade1"
+            ><img
+              src="https://r2.easyimg.io/hvkv2mry7/twitter.png"
+              alt="Twitter"
+          /></a>
+          <a href="https://discord.gg/NsHvsM4z"
+            ><img
+              src="https://r2.easyimg.io/hvkv2mry7/discord.png"
+              alt="Discord"
+          /></a>
+        </div>
 
-    <span>For any other queries checkout my socials</span>
-    <div class="social-icons">
-        <a href="https://github.com/itzzvivek"><img src="https://r2.easyimg.io/hvkv2mry7/github.png" alt="Github"></a>
-        <a href="https://www.linkedin.com/in/vivek-warkade-623866216/"><img src="https://r2.easyimg.io/hvkv2mry7/linkedin.png" alt="Linkedin"></a>
-        <a href="https://twitter.com/vivekwarkade1"><img src="https://r2.easyimg.io/hvkv2mry7/twitter.png" alt="Twitter"></a>
-        <a href="https://discord.gg/NsHvsM4z"><img src="https://r2.easyimg.io/hvkv2mry7/discord.png" alt="Discord"></a>
-    </div>
-
-    <div>
-        <p>To unsubscribe, click the following link:</p>
-        <button class="bg-blue-600 text-white p-10 border-0" style="background-color: #0076cb">
-            <a href="{{ unsubscribe_link }}" style="text-decoration: none; padding: 30px 10px; color: white; border-radius: 5px;">Unsubscribe</a>
-        </button>
-    </div>
-
-</body>
-</html>
-</body>
+        <div>
+          <p>
+            To unsubscribe, click the link:
+            <a href="{{ unsubscribe_link }}"
+              >unsubscribe</a
+            >
+          </p>
+        </div>
+      </body>
+    </html>
+  </body>
 </html>
