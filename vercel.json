@@ -11,6 +11,5 @@
         }
     },
     "version": 2,
-    "routes": [{"src": "/(.*)", "use": "portfolio/wsgi.py"}]
 
 }
