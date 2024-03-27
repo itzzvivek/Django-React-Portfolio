@@ -1,0 +1,17 @@
+{
+    "framework":{
+        "name": "Django",
+        "version": "5.0.2"
+    },
+
+    "functions": {
+        "api":{
+            "runtime":"python3.11",
+            "memory":512
+        }
+    },
+    "version": 2,
+    "builds": [{"src": "portfolio/*.py", "use": "@vercel/python3.11"}],
+    "routes": [{"src": "/(.*)", "use": "portfolio/wsgi.py"}]
+
+}
