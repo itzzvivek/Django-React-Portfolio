@@ -1,8 +1,5 @@
 {
-    "framework":{
-        "name": "Django",
-        "version": "5.0.2"
-    },
+    "framework": "Django",
 
     "functions": {
         "api":{
@@ -10,6 +7,5 @@
             "memory":512
         }
     },
-    "version": 2,
-
+    "version": 2
 }
