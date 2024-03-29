@@ -8,6 +8,7 @@ https://docs.djangoproject.com/en/2.2/topics/settings/
 
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
+
 """
 
 import os
@@ -84,8 +85,12 @@ WSGI_APPLICATION = 'portfolio.wsgi.app'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ['db_NAME'],
+        'USER': os.environ['db_USER'],
+        'PASSWORD': os.environ['db_PASSWORD'],
+        'HOST': os.environ['db_HOST'],
+        'PORT': os.environ['db_PORT'],
     }
 }
 

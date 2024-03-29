@@ -91,3 +91,4 @@ def unsubscribe_newsletter(request, unsubscribe_token):
         raise Http404("Invalid unsubscribe link.")
 
     return render(request, "unsubscribeMsg.html")
+
