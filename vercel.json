@@ -1,8 +1,0 @@
-{
-    "functions": {
-        "api":{
-            "runtime":"python3.11.4",
-            "memory":512
-        }
-    }
-}
