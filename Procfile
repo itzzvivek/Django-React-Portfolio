@@ -1,2 +1,2 @@
-pip install -r requirements.txt
+web: pip install -requirements.txt
 web: gunicorn portfolio.wsgi --log-file -
