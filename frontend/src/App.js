@@ -5,7 +5,6 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import Newsletter from "./components/Newsletter";
-// import Work from "./components/Work";
 import About from "./components/About";
 import SocialFooter from './components/SocialFooter';
 
@@ -21,10 +20,6 @@ function App() {
       path: '/about',
       element: <><Navbar /><About /></>
     },
-    // {
-    //   path: '/work',
-    //   element: <><Navbar /><Work /></>
-    // },
     {
       path: '/contact',
       element: <><Navbar /><Contact /></>
