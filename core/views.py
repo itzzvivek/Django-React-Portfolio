@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django.core.mail import send_mail, EmailMultiAlternatives
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -91,4 +91,3 @@ def unsubscribe_newsletter(request, unsubscribe_token):
         raise Http404("Invalid unsubscribe link.")
 
     return render(request, "unsubscribeMsg.html")
-
