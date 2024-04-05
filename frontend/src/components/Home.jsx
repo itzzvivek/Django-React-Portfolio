@@ -1,6 +1,7 @@
+"use client";
 import React from 'react'
-// import { ReactTyped } from 'react-typed'
 import {HiArrowNarrowRight} from 'react-icons/hi'
+
 
 const Home = () => {
   return (
@@ -23,9 +24,8 @@ const Home = () => {
               </a>
             </div>
         </div>
-
     </div>
   )
-}
+};
 
 export default Home

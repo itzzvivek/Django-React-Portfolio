@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.core.mail import send_mail, EmailMultiAlternatives
+from django.core.mail import EmailMultiAlternatives
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib import messages
@@ -15,26 +15,6 @@ import re
 
 def home(request):
     return render(request, 'index.html')
-
-
-@csrf_exempt
-def contact(request):
-    if request.method == 'POST':
-        data = json.loads(request.body)
-        name = data.get('name')
-        email = data.get('email')
-        message = data.get('message')
-
-        send_mail(
-            'Contact Form Submission',
-            f'Name: {name}\nEmail: {email}\nMessage: {message}',
-            settings.EMAIL_HOST_USER,
-            [email],
-            fail_silently=False,
-        )
-
-        return JsonResponse({'success': True})
-    return JsonResponse({'success': False})
 
 
 @csrf_exempt
