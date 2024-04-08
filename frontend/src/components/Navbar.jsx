@@ -20,15 +20,15 @@ const Navbar = () => {
   
 
   return (
-    <div className="fixed w-full h-[80x] flex justify-between items-center px-4 bg-[#14101b] text-gray-300">
+    <div className="fixed w-full h-[80x] flex justify-between items-center px-4 bg-[#0e1630] text-gray-300">
       <h1 className="font-bold text-4xl sm:2xl">VW</h1>
 
       {/* menu */}
       <ul className="hidden md:flex">
-        <NavLink to="/" className="hover:text-teal-600"><li>Home</li></NavLink>
-        <NavLink to="/about" className="hover:text-teal-600"><li>About</li></NavLink>
-        <NavLink to="/contact" className="hover:text-teal-600"><li>Contact</li></NavLink>
-        <NavLink to="/newsletter"  className="hover:text-teal-600"><li>Newsletter</li></NavLink>
+        <NavLink to="/" className="hover:text-teal-400"><li>Home</li></NavLink>
+        <NavLink to="/about" className="hover:text-teal-400"><li>About</li></NavLink>
+        <NavLink to="/contact" className="hover:text-teal-400"><li>Contact</li></NavLink>
+        <NavLink to="/newsletter"  className="hover:text-teal-400"><li>Newsletter</li></NavLink>
       </ul>
 
       {/* Hamburger */}

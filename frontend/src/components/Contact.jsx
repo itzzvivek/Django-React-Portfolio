@@ -4,13 +4,13 @@ const Contact = () => {
   return (
     <div
       name="contact"
-      className="w-full h-screen bg-[#14101b] flex justify-center items-center p-4"
+      className="w-full h-screen bg-[#0e1630] flex justify-center items-center p-4"
     >
       <div
         className="flex flex-col w-full"
       >
         <div className="pb-8 text-center">
-          <p className="text-4xl font-bold text-center inline border-b-4 border-teal-600 text-gray-300">
+          <p className="text-4xl font-bold text-center inline border-b-4 border-teal-400 text-gray-300">
             Contact
           </p>
         </div>
@@ -19,7 +19,7 @@ const Contact = () => {
           project, feel free to connect with me :
           <a
             href="https://topmate.io/vivek_warkade"
-            className="underline text-teal-600 ml-2"
+            className="underline text-teal-400 ml-2"
           >
             Let's Connect
           </a>

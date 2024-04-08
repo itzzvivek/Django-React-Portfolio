@@ -4,7 +4,7 @@ import { HiOutlineMail } from "react-icons/hi";
 
 const SocialFooter = () => {
   return (
-    <div class="socialHandle" className="bg-[#14101b] w-full social-bar fixed bottom-0 left-0 right-0 p-4 flex justify-center items-center z-10 lg:hidden">
+    <div class="socialHandle" className="bg-[#0e1630] w-full social-bar fixed bottom-0 left-0 right-0 p-4 flex justify-center items-center z-10 lg:hidden">
       <div className="justify-center flex text-white">
         <a
           className="mr-6 text-2xl"

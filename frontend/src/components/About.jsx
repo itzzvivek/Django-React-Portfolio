@@ -3,20 +3,19 @@ import React from "react";
 
 const About = () => {
   return (
-    <div name="about" className="w-full h-screen bg-[#14101b] text-gray-300">
+    <div name="about" className="w-full h-screen bg-[#0e1630] text-gray-300">
       <div className="flex flex-col justify-center items-center w-full h-full">
         <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
           <div className="sm:text-right pb-8 pl-4">
-            <p className="text-4xl font-bold inline border-b-4 border-teal-600">
+            <p className="text-4xl font-bold inline border-b-4 border-teal-400">
               About
             </p>
           </div>
-          <div></div>
         </div>
         <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
           <div className="sm:text-right text-4xl font-bold">
             <p>
-              Hi. I'm <span className="text-teal-600">Vivek Warkade</span>, nice
+              Hi. I'm <span className="text-teal-400">Vivek Warkade</span>, nice
               to meet you. Please take a look around.
             </p>
           </div>
@@ -29,12 +28,12 @@ const About = () => {
               experiences.I'm focused on honing my skills and exploring new
               technologies to stay at the forefront of the ever-evolving field
               of software development. Visit my
-              <a href="https://github.com/itzzvivek" className="text-teal-600 font-bold px-2">
+              <a href="https://github.com/itzzvivek" className="text-teal-400 font-bold px-2">
                 github
               </a>
               page to view my work
             </p>
-            <a href="/" className="font-bold border-b-4 border-teal-600">Resume</a>
+            <a href="/" className="font-bold border-b-4 border-teal-400">Resume</a>
           </div>
         </div>
         <div name="skills" className="mt-4">
