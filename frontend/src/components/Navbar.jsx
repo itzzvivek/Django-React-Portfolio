@@ -41,7 +41,7 @@ const Navbar = () => {
         className={
           !nav
             ? "hidden"
-            : "absolute top-0 left-0 w-full h-screen bg-[#14101b] flex flex-col justify-center items-center"
+            : "absolute top-0 left-0 w-full h-screen bg-[#0e1630] flex flex-col justify-center items-center"
         }
       >
         <NavLink to="/" onClick={handleLinkClick} className="py-6 text-4xl"><li>Home</li></NavLink>
